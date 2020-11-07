@@ -11,36 +11,22 @@ class LaravelPassportViewsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*
-         * Optional methods to load your package assets
-         */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laravel-passport-views');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-passport-views');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
-
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('laravel-passport-views.php'),
+                __DIR__.'/../config/config.php' => config_path('passport-views.php'),
             ], 'config');
 
-            // Publishing the views.
-            /*$this->publishes([
+            $this->publishes([
+                __DIR__.'/../resources/js/components' => resource_path('js/components/passport'),
+            ], 'laravel-passport-views');
+
+            $this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/laravel-passport-views'),
-            ], 'views');*/
+            ], 'laravel-passport-views');
 
-            // Publishing assets.
-            /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/laravel-passport-views'),
-            ], 'assets');*/
-
-            // Publishing the translation files.
-            /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-passport-views'),
-            ], 'lang');*/
-
-            // Registering package commands.
-            // $this->commands([]);
+            $this->publishes([
+                __DIR__.'/../public' => public_path('vendor/laravel-passport-views'),
+            ], 'laravel-passport-views');
         }
     }
 
@@ -49,10 +35,12 @@ class LaravelPassportViewsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-passport-views');
 
-        // Register the main class to use with the facade
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-passport-views');
+
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+
         $this->app->singleton('laravel-passport-views', function () {
             return new LaravelPassportViews;
         });
