@@ -7432,7 +7432,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.action-link[data-v-1552a5b6] {\n    cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.action-link[data-v-1552a5b6] {\r\n    cursor: pointer;\n}\r\n", ""]);
 
 // exports
 
@@ -35519,6 +35519,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
+window.axios = axios__WEBPACK_IMPORTED_MODULE_1___default.a;
 
 try {
   window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");

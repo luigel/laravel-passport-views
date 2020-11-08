@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Passport {{ config('app.name') ? ' - ' . config('app.name') : '' }}</title>
-    <link rel="stylesheet" href="{{ asset(mix('app.css', 'laravel-passport-views')) }}">
+    <link rel="stylesheet" href="{{ asset(mix('app.css', 'vendor/laravel-passport-views')) }}">
 </head>
 
 <body>

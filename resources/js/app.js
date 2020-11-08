@@ -2,7 +2,7 @@ import Vue from "vue";
 import axios from "axios";
 
 window.Popper = require("popper.js").default;
-
+window.axios = axios;
 try {
     window.$ = window.jQuery = require("jquery");
 
@@ -33,5 +33,5 @@ Vue.component(
 );
 
 new Vue({
-    el: "#app",
+    el: "#app"
 });
