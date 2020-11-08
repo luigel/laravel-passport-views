@@ -1,6 +1,7 @@
 # Laravel Passport Views
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/luigel/laravel-passport-views.svg?style=flat-square)](https://packagist.org/packages/luigel/laravel-passport-views)
+[![Build Status](https://scrutinizer-ci.com/g/luigel/laravel-passport-views/badges/build.png?b=master)](https://scrutinizer-ci.com/g/luigel/laravel-passport-views/build-status/master)
 [![StyleCI](https://github.styleci.io/repos/310862215/shield?branch=master)](https://github.styleci.io/repos/310862215?branch=master)
 [![Quality Score](https://img.shields.io/scrutinizer/g/luigel/laravel-passport-views.svg?style=flat-square)](https://scrutinizer-ci.com/g/luigel/laravel-passport-views)
 [![Total Downloads](https://img.shields.io/packagist/dt/luigel/laravel-passport-views.svg?style=flat-square)](https://packagist.org/packages/luigel/laravel-passport-views)
