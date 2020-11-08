@@ -18,10 +18,16 @@ composer require luigel/laravel-passport-views
 
 ## Usage
 
-publish the views in your project.
+To publish the views in your project.
 
 ```bash
 php artisan vendor:publish --tag="laravel-passport-views" --force
+```
+
+To access the passport ui the default route is `/oauth-ui` customize it in `.env`
+
+```env
+PASSPORT_OAUTH_ROUTE="/oauth-clients"
 ```
 
 ### Testing
@@ -36,9 +42,12 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ### TODO or Need help.
 
-[ ] Make a gate and it should be customizable.
-[ ] Use tailwind instead of bootstrap.
-[ ] Improve layout.
+- [ ] Make a gate and it should be customizable.
+
+- [ ] Use tailwind instead of bootstrap.
+
+- [ ] Improve layout.
+
 
 ## Contributing
 
